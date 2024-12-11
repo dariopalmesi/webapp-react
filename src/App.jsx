@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router"
 import AppDefaultLayout from "./layout/AppDefaultLayout.jsx"
+import MoviesPage from "./pages/MoviesPage.jsx"
 
 function App() {
 
@@ -8,7 +9,8 @@ function App() {
       <BrowserRouter>
         <Routes>
 
-          <Route path="/" element={<AppDefaultLayout />}>
+          <Route element={<AppDefaultLayout />}>
+            <Route index element={<MoviesPage />} />
 
           </Route>
 
