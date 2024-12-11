@@ -7,13 +7,12 @@ export default function MoviesPage() {
     const [movies, setMovies] = useState([]);
 
 
+
     useEffect(() => {
         fetch('http://localhost:3001/movies')
             .then(response => response.json())
             .then(data => {
-                console.log(data);
-
-                setMovies(data.movies);
+                setMovies(data);
             })
             .catch(error => console.error('Errore fetch:', error));
     }, []);

@@ -8,8 +8,8 @@ export default function MoviesCard({ movie }) {
                 <div className="card-body">
                     <h4>{movie.title}</h4>
                     <span className="text-muted">By <span>{movie.director}</span></span>
-                    <p className="overview mb-3">{movie.synopsis}</p>
-                    <p>{movie.year}</p>
+                    <p className="overview mb-3">{movie.abstract}</p>
+                    <p>{movie.release_year}</p>
                     <Link to={`/movies/${movie.id}`} className="btn btn-primary">Read more</Link>
                 </div>
 
