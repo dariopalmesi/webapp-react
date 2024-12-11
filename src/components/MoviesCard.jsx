@@ -4,7 +4,7 @@ export default function MoviesCard({ movie }) {
     return (
         <>
 
-            <div className="movie card">
+            <div className="movie card bg-warning-subtle">
                 <div className="card-body">
                     <h4>{movie.title}</h4>
                     <span className="text-muted">By <span>{movie.director}</span></span>

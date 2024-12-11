@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 
 
@@ -10,16 +11,12 @@ export default function AppDefaultLayout() {
 
             <Header />
 
-            <main>
+            <main className='bg-secondary pb-4'>
                 <Outlet />
             </main>
 
 
-            <footer>
-                <h2>
-                    ciao
-                </h2>
-            </footer>
+            <Footer />
 
         </>
 
