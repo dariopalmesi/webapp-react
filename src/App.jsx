@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router"
 import AppDefaultLayout from "./layout/AppDefaultLayout.jsx"
 
 function App() {
@@ -8,7 +8,9 @@ function App() {
       <BrowserRouter>
         <Routes>
 
-          <Route element={<AppDefaultLayout />} />
+          <Route path="/" element={<AppDefaultLayout />}>
+
+          </Route>
 
         </Routes>
 

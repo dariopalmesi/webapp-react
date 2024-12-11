@@ -1,13 +1,14 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router'
+import Header from '../components/Header'
+
 
 
 export default function AppDefaultLayout() {
 
     return (
         <>
-            <header>
-                <h1>ciao a tutti</h1>
-            </header>
+
+            <Header />
 
             <main>
                 <Outlet />
@@ -15,7 +16,9 @@ export default function AppDefaultLayout() {
 
 
             <footer>
-
+                <h2>
+                    ciao
+                </h2>
             </footer>
 
         </>
