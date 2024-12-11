@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
         <>
-            <footer className="bg-black text-white pt-5">
+            <footer className="bg-black text-white pt-5 pb-5">
                 <div className="container">
                     <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
                         <div className="col">
