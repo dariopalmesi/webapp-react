@@ -1,0 +1,11 @@
+img {
+    max-width: 100%;
+}
+
+.card {
+    transition: 1s
+}
+
+.card:hover {
+    scale: 1.05;
+}

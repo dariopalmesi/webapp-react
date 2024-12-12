@@ -17,7 +17,7 @@ export default function ReviewsCard({ review }) {
     }
 
     return (
-        <div className="reviews card mb-3 bg-warning-subtle">
+        <div className="reviews card mb-3 bg-warning-subtle shadow p-3 mb-5 bg-body-tertiary rounded">
             <div className="card-body">
                 <p>{review.name}</p>
                 <span className="text-muted"><span>{review.text}</span></span>
