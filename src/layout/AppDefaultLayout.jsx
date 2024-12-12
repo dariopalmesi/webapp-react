@@ -11,7 +11,7 @@ export default function AppDefaultLayout() {
 
             <Header />
 
-            <main className='bg-secondary pb-4'>
+            <main className='bg-secondary pb-4 vh-100 overflow-auto'>
                 <Outlet />
             </main>
 

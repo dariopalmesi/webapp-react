@@ -4,7 +4,7 @@ export default function Banner({ title, subtitle, leadtext }) {
             <div className="container-lg">
                 <h1>{title}</h1>
                 <h4 className="text-muted">{subtitle}</h4>
-                <strong className="lead fs-3">{leadtext}</strong>
+                <strong className="lead  fw-bold">{leadtext}</strong>
             </div>
         </div>
     )

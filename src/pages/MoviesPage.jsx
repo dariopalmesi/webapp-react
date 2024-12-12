@@ -24,7 +24,7 @@ export default function MoviesPage() {
         <>
 
             <Banner title={'Bool Movies'} subtitle={'The nerdest movies commmunity'} leadtext={'lorem ipsum'} />
-            <section className="py-5">
+            <section className="py-5 ">
                 <div className="container">
                     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
                         {

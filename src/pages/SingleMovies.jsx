@@ -15,7 +15,7 @@ export default function SingleMovies() {
         fetch(`http://localhost:3001/movies/${id}`)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
+
 
                 setMovie(data);
 
