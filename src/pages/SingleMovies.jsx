@@ -3,11 +3,10 @@ import { useState, useEffect } from "react";
 import Banner from "../components/Bannes";
 import ReviewsCard from "../components/ReviewsCard";
 
-export default function ReviewsPage() {
+export default function SingleMovies() {
 
     const { id } = useParams();
-    const [reviews, setReviews] = useState([]);
-    const [movies, setMovies] = useState([]);
+    const [movie, setMovie] = useState({});
 
 
 
@@ -18,9 +17,7 @@ export default function ReviewsPage() {
             .then(data => {
                 console.log(data);
 
-                setReviews(data.reviews);
-
-                setMovies(data);
+                setMovie(data);
 
 
             })
@@ -32,11 +29,11 @@ export default function ReviewsPage() {
 
     return (
         <>
-            <Banner title={movies.title} subtitle={movies.abstract} leadtext={movies.genre} />
+            <Banner title={movie.title} subtitle={movie.abstract} leadtext={movie.genre} />
 
             <section>
                 <div className="container">
-                    {reviews.map((review) => <ReviewsCard key={movies.abstract} review={review} />)}
+                    {movie.reviews && movie.reviews.map((review) => <ReviewsCard key={review.id} review={review} />)}
                 </div>
             </section>
         </>
