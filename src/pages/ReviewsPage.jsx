@@ -7,6 +7,7 @@ export default function ReviewsPage() {
 
     const { id } = useParams();
     const [reviews, setReviews] = useState([]);
+    const [movies, setMovies] = useState([]);
 
 
 
@@ -19,6 +20,8 @@ export default function ReviewsPage() {
 
                 setReviews(data.reviews);
 
+                setMovies(data);
+
 
             })
             .catch(error => console.error('Errore fetch:', error));
@@ -29,11 +32,11 @@ export default function ReviewsPage() {
 
     return (
         <>
-            <Banner title={'Bool Movies'} subtitle={'The nerdest movies commmunity'} leadtext={'lorem ipsum'} />
+            <Banner title={movies.title} subtitle={movies.abstract} leadtext={movies.genre} />
 
             <section>
                 <div className="container">
-                    {reviews.map((review) => <ReviewsCard key={review.id} review={review} />)}
+                    {reviews.map((review) => <ReviewsCard key={movies.abstract} review={review} />)}
                 </div>
             </section>
         </>
