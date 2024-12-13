@@ -70,7 +70,7 @@ export default function FormCardReview({ movie_id, refreshMovie }) {
                     <form onSubmit={HandleFormSubmit}>
                         <div className="mb-3">
                             <label htmlFor="name"> Nome</label>
-                            <input name='name' id='name' type="text" className="form-control" placeholder="Dario" onChange={(e) => setName(e.target.value)} required />
+                            <input name='name' id='name' type="text" className="form-control" placeholder="Tuo nome" onChange={(e) => setName(e.target.value)} required />
                         </div>
 
                         <div className="rating mb-3 text-warning">
@@ -78,7 +78,7 @@ export default function FormCardReview({ movie_id, refreshMovie }) {
                         </div>
                         <div className="mb-3">
                             <label htmlFor="review"> Recensione</label>
-                            <textarea className="form-control" name="review" id="review" placeholder="leave your review here " value={text} onChange={(e) => setText(e.target.value)} required></textarea>
+                            <textarea className="form-control" name="review" id="review" placeholder="Inserisci qui... " value={text} onChange={(e) => setText(e.target.value)} required></textarea>
                         </div>
                         <div className="mb-3">
                             <button type="submit" className="btn btn-success">Invia</button>
