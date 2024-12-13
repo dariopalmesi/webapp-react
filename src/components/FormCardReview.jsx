@@ -62,26 +62,26 @@ export default function FormCardReview({ movie_id, refreshMovie }) {
     return (
         <div className="container">
             {success && <div>{success}</div>}
-            <button onClick={HandleFormToggle} className="btn btn-dark mb-2">Write review</button>
+            <button onClick={HandleFormToggle} className="btn btn-danger mb-2">Scrivi qui....</button>
 
             <div id="form-card" className="card mb-4 d-none">
                 <div className="card-body">
-                    <h3>Leave your review</h3>
+                    <h3>Inserisci Recensione</h3>
                     <form onSubmit={HandleFormSubmit}>
                         <div className="mb-3">
-                            <label htmlFor="name"> Name</label>
+                            <label htmlFor="name"> Nome</label>
                             <input name='name' id='name' type="text" className="form-control" placeholder="Dario" onChange={(e) => setName(e.target.value)} required />
                         </div>
 
-                        <div className="rating mb-3 text-warnig">
+                        <div className="rating mb-3 text-warning">
                             {[1, 2, 3, 4, 5].map(n => <i key={n} className={`bi bi-star${n <= vote ? '-fill' : ''} `} onClick={() => setVote(n)}></i>)}
                         </div>
                         <div className="mb-3">
-                            <label htmlFor="review">Your review</label>
+                            <label htmlFor="review"> Recensione</label>
                             <textarea className="form-control" name="review" id="review" placeholder="leave your review here " value={text} onChange={(e) => setText(e.target.value)} required></textarea>
                         </div>
                         <div className="mb-3">
-                            <button type="submit" className="btn btn-primary">Send</button>
+                            <button type="submit" className="btn btn-success">Invia</button>
                             {errorMessage && <span className="text-danger"><i className="bi bi-x"></i>{errorMessage}</span>}
                         </div>
                     </form>
