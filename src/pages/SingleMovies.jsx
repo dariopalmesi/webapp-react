@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Banner from "../components/Bannes";
 import ReviewsCard from "../components/ReviewsCard";
+import FormCardReview from "../components/FormCardReview";
 
 export default function SingleMovies() {
 
@@ -30,7 +31,7 @@ export default function SingleMovies() {
     return (
         <>
             <Banner title={movie.title} subtitle={movie.abstract} leadtext={movie.genre} />
-
+            <FormCardReview movie_id={id} />
             <section>
                 <div className="container">
                     {movie.reviews && movie.reviews.map((review) => <ReviewsCard key={review.id} review={review} />)}
