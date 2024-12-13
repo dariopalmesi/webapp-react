@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function FormCardReview({ movie_id }) {
+export default function FormCardReview({ movie_id, refreshMovie }) {
     const [name, setName] = useState("");
     const [text, setText] = useState("");
     const [vote, setVote] = useState(0);
@@ -42,9 +42,8 @@ export default function FormCardReview({ movie_id }) {
                 console.log(data);
                 if (data.success) {
                     setSuccess('Thanks for you review')
-
+                    refreshMovie();
                     setTimeout(HandleFormToggle, 1000)
-
                     setTimeout(() => setSuccess(null), 3000)
 
                 }

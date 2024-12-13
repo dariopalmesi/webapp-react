@@ -12,6 +12,7 @@ export default function SingleMovies() {
 
 
 
+
     useEffect(() => {
         fetch(`http://localhost:3001/movies/${id}`)
             .then(response => response.json())
@@ -24,6 +25,13 @@ export default function SingleMovies() {
             })
             .catch(error => console.error('Errore fetch:', error));
     }, []);
+    const refreshMovie = () => {
+        fetch(`http://localhost:3001/movies/${id}`)
+            .then((response) => response.json())
+            .then((data) => setMovie(data))
+            .catch((error) => console.error("Errore fetch:", error));
+    };
+
 
 
 
@@ -31,7 +39,7 @@ export default function SingleMovies() {
     return (
         <>
             <Banner title={movie.title} subtitle={movie.abstract} leadtext={movie.genre} />
-            <FormCardReview movie_id={id} />
+            <FormCardReview movie_id={id} refreshMovie={refreshMovie} />
             <section>
                 <div className="container">
                     {movie.reviews && movie.reviews.map((review) => <ReviewsCard key={review.id} review={review} />)}
