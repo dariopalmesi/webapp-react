@@ -8,7 +8,7 @@ export default function MoviesPage() {
     // 1. Stato per memorizzare l'elenco dei film
     const [movies, setMovies] = useState([]);
     // `movies` inizialmente è un array vuoto. Verrà popolato con i dati ricevuti dal server.
-    const [loading, setLoading] = useState(false);
+    const { loading, setLoading } = useContext(GlobalContext);
     // `loading` inizialmente è false. Verrà impostato a true quando viene effettuata la chiamata fetch e a false quando termina.
 
     // 2. Effetto per caricare i film all'avvio del componente

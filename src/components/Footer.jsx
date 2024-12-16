@@ -38,9 +38,9 @@ export default function Footer() {
                                 - `d-flex`: Dispone gli elementi in riga.
                                 - `m-2`: Margine di 2 unità intorno a ciascuna icona.
                                 */}
-                                <i className="m-2 bi bi-facebook"></i>
-                                <i className="m-2 bi bi-twitter"></i>
-                                <i className="m-2 bi bi-instagram"></i>
+                                <a href="https://www.facebook.com/" target="_blank"><i className="m-2 bi bi-facebook"></i></a>
+                                <a href="https://x.com/?lang=it" target="_blank"><i className="m-2 bi bi-twitter"></i></a>
+                                <a href="https://www.instagram.com/" target="_blank"><i className="m-2 bi bi-instagram"></i></a>
                                 {/* 
                                 Icone di Bootstrap Icons (Facebook, Twitter, Instagram). 
                                 Questi classi richiedono Bootstrap Icons nel progetto.
